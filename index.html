@@ -8,8 +8,37 @@
     </style>
 </head>
 <body>
-  <script>
-    
-  </script>
+    <!--feedback form-->
+    <form id="feedbackForm">
+        <!--text input for name-->
+        Name:
+            <input type = "text" name = "name" value = "" maxlength = "100" />
+        <br />
+
+        <!--dropdown selection for rating-->
+        Rating:
+        <select name = "rating">
+            <option value = "1">1</option>
+            <option value = "2">2</option>
+            <option value = "3">3</option>
+            <option value = "4">4</option>
+            <option value = "5">5</option>
+        </select>
+        <br />
+
+        <!--text input for customer comments-->
+        Comments:
+            <input type = "text" name = "comments" value = "" maxlength = "500" />
+        <br />
+
+        <!--submit button-->
+        <button type = "submit">Submit</button>
+
+    </form>
+
+    <!-- div element to display feedback-->
+    <div id="displayFeedback"></div>
+
+    <script src ="script.js></script>
 </body>
 </html>
