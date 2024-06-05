@@ -16,12 +16,24 @@ document.getElementById('feedbackForm').addEventListener('submit', function(even
     // Append the submitted feedback to the display area
     const displayFeedback = document.getElementById('displayFeedback');
     const feedbackEntry = document.createElement('div');
-    feedbackEntry.innerHTML = `
-        <h3>Feedback Submitted</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Rating:</strong> ${rating}</p>
-        <p><strong>Comments:</strong> ${comments}</p>
-    `;
+
+    const feedbackTitle = document.createElement('h3');
+    feedbackTitle.textContent = 'Feedback Submitted';
+
+    const feedbackName = document.createElement('p');
+    feedbackName.innerHTML = `<strong>Name:</strong> ${name}`;
+
+    const feedbackRating = document.createElement('p');
+    feedbackRating.innerHTML = `<strong>Rating:</strong> ${rating}`;
+
+    const feedbackComments = document.createElement('p');
+    feedbackComments.innerHTML = `<strong>Comments:</strong> ${comments}`;
+
+    feedbackEntry.appendChild(feedbackTitle);
+    feedbackEntry.appendChild(feedbackName);
+    feedbackEntry.appendChild(feedbackRating);
+    feedbackEntry.appendChild(feedbackComments);
+    
     displayFeedback.appendChild(feedbackEntry);
 
     // Clear the form
